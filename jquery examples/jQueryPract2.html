@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task: Show/Hide on check of checkbox/Radio Button</title>
+</head>
+<body>
+    <input type="checkbox" id="chkShowHide"> Show / Hide
+    <br>
+    <span class="ctrl1">Name :</span> <input type="text" id="txtName" class="ctrl1">
+    <input type="button" id="btnSave" value="Save" class="ctrl2">
+
+    <script src="jquery.js"></script>
+    <script>
+        $("#chkShowHide").click(function () {
+            if($("#chkShowHide").is(":checked")){
+                $(".ctrl1").hide();
+            }else{
+                $(".ctrl1").show();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add rows dynamically</title>
+
+</head>
+<body>
+    <table style="border: 1px  solid blue;">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Mobile</th>
+                <th><input type="button" value="ADD" id="btnADD" /></th>
+            </tr>
+        </thead>
+        <tbody id="tblEmpData">
+            <tr>
+                <td><input type="text" /></td>
+                <td><input type="text" /></td>
+                <td>&nbsp;</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <script src="jquery.js"></script>
+    <script>
+        $("#btnADD").click(function () {
+            
+            let dynamicHtmlText = "<tr>";
+                dynamicHtmlText += "<td><input type='text' /></td>";
+                dynamicHtmlText += "<td><input type=text' /></td>";
+                dynamicHtmlText += "<td>&nbsp;</td>";
+                dynamicHtmlText += "</tr>";
+
+                $("#tblEmpData").append(dynamicHtmlText);    
+            
+        });
+    </script>
+</body>
+</html>

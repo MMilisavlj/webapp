@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task: Check/Uncheck all Checkboxes on Check/Uncheck</title>
+</head>
+<body>
+    <div>
+        <input type="checkbox" id="chkSelectAll"> Select all
+        <br>
+        <input type="checkbox" class="chk"> Option 1 <br>
+        <input type="checkbox" class="chk"> Option 2 <br>
+        <input type="checkbox" class="chk"> Option 3 <br>
+    </div>
+    <script src="jquery.js"></script>
+    <script>
+        $("#chkSelectAll").on("click", function () {
+            if ($("#chkSelectAll").is(":checked")) {
+                $(".chk").prop("checked", true);
+            }else{
+                $(".chk").prop("checked", false);
+            }
+        });
+    </script>
+</body>
+</html>

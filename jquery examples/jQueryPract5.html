@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop through table's all inputs and print them in a div/label</title>
+</head>
+<body>
+    <table>
+        <tbody id="tblEmpData">
+            <tr>
+                <td>
+                    <input type="text" id="txtName">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="txtMobile">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="txtAdress">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <input type="button" id="btnClick" value="Show Values">
+    <div id="dvResult">
+
+    </div>
+
+    <script src="jquery.js"></script>
+    <script>
+        $("#btnClick").on('click', function (){
+            let resultString = "";
+            $("#tblEmpData >tr").each(function () {
+                resultString += " " + $(this).find('input').val();
+            });
+            $("#dvResult").html(resultString);
+        });
+    </script>
+</body>
+</html>

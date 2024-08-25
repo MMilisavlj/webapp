@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill/Clear Drop Down Options on Button Click</title>
+</head>
+<body>
+    <div>
+        <select id="DDLBooks">
+            <option value="">Select Book</option>
+        </select>
+        <input type="button" value="Add Books" id="btnAddBooks">
+        <input type="button" value="Clear Books" id="btnClearBooks">
+    </div>
+
+    <script src="jquery.js"></script>
+    <script>
+        let AllBooks = ["C#", "PHP", "Java", "Python"];
+        $("#btnAddBooks").click(function () {
+            let AllBooksLength = AllBooks.length;
+            for (let i = 0; i < AllBooks.length; i++) {
+                $("#DDLBooks").append(new Option(AllBooks[i], AllBooks[i]));                
+            }
+        });
+        $("#btnClearBooks").click(function () {
+            $("#DDLBooks").empty();
+            $("#DDLBooks").append(new Option("Select Book", "" ));
+        });
+    </script>
+</body>
+</html>

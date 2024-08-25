@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Practice</title>
+</head>
+<body>
+    New Book Name : <input type="text" id="txtNewBook">
+    <br>
+    All Books: 
+    <select id="DDLbook">
+        <option value="">Select</option>
+    </select>
+    <br>
+    <input type="button" id="btnAdd" value="ADD BOOK">
+
+    <script src="jquery.js"></script>
+    <script>
+        $("#btnAdd").click(function () {
+            let newbook = $("#txtNewBook").val();
+            $("#DDLbook").append(new Option(newbook,newbook));l
+        });
+    </script>
+</body>
+</html>

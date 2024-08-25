@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task: Add/Remove class & Text Box Blank validation on Button Click</title>
+    <style>
+        .error{
+            border: 2px solid Darkred;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Input Name</td>
+            <td>
+                <input type="text" id="txtName">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="button" id="btnSave" value="SAVE">
+            </td>
+        </tr>
+    </table>
+
+
+    <script src="jquery.js"></script>
+    <script>
+        $("#btnSave").click(function () {
+            if($("#txtName").val() == ''){
+                $("#txtName").addClass('error');
+            }else{
+                $("#txtName").removeClass('error');
+            }
+        });
+    </script>
+</body>
+</html>
